@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
 import { Poppins } from "next/font/google";
+import Head from "next/head";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 import type { AppProps } from "next/app";
-import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${poppins.className} font-sans`}>
+    <div className={`${poppins.className} bg-gray-50`}>
       <Head>
         <title>Kenny Karli Architect — Desain, Renovasi, Bangun</title>
         <meta
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Header />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen">
         <Component {...pageProps} />
       </main>
       <Footer />
